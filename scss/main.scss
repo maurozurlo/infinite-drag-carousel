@@ -19,6 +19,9 @@ body {
   position: absolute;
   width: $slider-width;
   height: $slider-height;
+  right: 110px;
+    top: 220px;
+    min-height: 100%;
 }
 
 .wrapper {
@@ -33,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 0;
+  top: -$slider-height;
   left: 0;
   width: 10000px;
   height: 1000px;
@@ -55,24 +58,29 @@ body {
   justify-content: center;
   transition: all 1s;
   position: relative;
-  background: #FFCF47;
   border-radius: 2px;
+  opacity: .8;
 
   &.main{
       transform: scale(1);
+      opacity: 1;
   }
 }
 
 
 
+$color1: #FFCF47;
+$color2: #7ADCEF;
+$color3: #3CFF96;
+$color4: #a78df5;
+$color5: #ff8686;
+
 .slider.loaded {
-  .slide:nth-child(2),
-  .slide:nth-child(7) { background: #FFCF47 }
-  .slide:nth-child(1),
-  .slide:nth-child(6) { background: #7ADCEF }
-  .slide:nth-child(3) { background: #3CFF96 }
-  .slide:nth-child(4) { background: #a78df5 }
-  .slide:nth-child(5) { background: #ff8686 }
+  .slide:nth-child(1), .slide:nth-child(6) { background: $color1 }
+  .slide:nth-child(2), .slide:nth-child(7) { background: $color2 }
+  .slide:nth-child(3), .slide:nth-child(8) { background: $color3 }
+  .slide:nth-child(4) { background: $color4 }
+  .slide:nth-child(5) { background: $color5 }
 }
 
 .control {
